@@ -1,5 +1,14 @@
 import ImprovedNoise from './ImprovedNoise';
 
+export const SOCKET_EVENTS = {
+  PLAYER_JOINED: 'player joined',
+  ROOM_CREATED: 'room created',
+  PLAYER_NAME_UPDATED: 'player name updated',
+  CREATE_ROOM: 'create room',
+  UPDATE_PLAYER_NAME: 'update player name',
+  JOIN_ROOM: 'join room'
+}
+
 function generateHeight( width, height ) {
 
   const data = [], perlin = new ImprovedNoise(),

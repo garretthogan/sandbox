@@ -13,12 +13,25 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages > li { padding: 0.5rem 1rem; }
       #messages > li:nth-child(odd) { background: #efefef; }
+
+      .ui-container {
+        display: grid;
+        width: 256px;
+      }
     </style>
   </head>
   <body>
     <div id="app"></div>
-    <input id="join-input" placeholder="room code" />
-    <button id="join-button">join room</button>
+    <span>Menu</span>
+    <div class="ui-container">
+      <input id="create-input" placeholder="room name" />
+      <button id="create-button">create room</button>
+      <input id="join-input" placeholder="room code" />
+      <button id="join-button">join room</button>
+      <input id="player-name-input" placeholder="player name" />
+      <button id="player-name-button">update name</button>
+      <ul id="player-list"></ul>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/three.js"></script>
     <script src="/stats.js"></script>

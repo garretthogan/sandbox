@@ -1,7 +1,13 @@
 import BufferGeometryUtils from './BufferGeometryUtils';
 import { getY, worldHalfWidth, worldHalfDepth, worldDepth, worldWidth } from './utils';
 
-export function generate() {
+const matrices = [];
+
+export function getWorldMatrices() {
+  return matrices;
+}
+
+export function generate(roomKey) {
 
   const matrix = new THREE.Matrix4();
 
@@ -81,6 +87,7 @@ export function generate() {
 
       }
 
+      matrices.push(Object.assign({}, matrix));
     }
 
   }
