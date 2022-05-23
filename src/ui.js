@@ -27,3 +27,8 @@ export function init(socket) {
     socket.emit(SOCKET_EVENTS.UPDATE_PLAYER_NAME, updateNameInput.value, roomInfo.playerId, roomInfo.roomKey);
   });  
 }
+
+export function setRoomCode(roomCode) {
+  const roomCodeInfo = document.getElementById('room-code');
+  roomCodeInfo.innerText = `Room Code: ${roomCode}`;
+}

@@ -6,7 +6,8 @@ export const SOCKET_EVENTS = {
   PLAYER_NAME_UPDATED: 'player name updated',
   CREATE_ROOM: 'create room',
   UPDATE_PLAYER_NAME: 'update player name',
-  JOIN_ROOM: 'join room'
+  JOIN_ROOM: 'join room',
+  PLAYER_POS_UPDATED: 'player pos updated'
 }
 
 function generateHeight( width, height ) {
